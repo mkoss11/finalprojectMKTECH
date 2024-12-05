@@ -1,3 +1,4 @@
+
 body {
     font-family: 'Roboto', sans-serif;
     color: #363330;
@@ -14,8 +15,7 @@ header {
 header .logo {
     display: block;
     margin: 0 auto;
-    max-width: 120px; /* Adjusted for smaller logo */
-    margin-bottom: 1rem;
+    max-width: 120px;
 }
 nav ul {
     list-style: none;
@@ -35,33 +35,60 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
 }
+
 .new-posts, .previous-posts {
     display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     padding: 2rem;
 }
 article img {
     max-width: 100%;
-    height: auto;
+    height: 200px; 
+    object-fit: cover; 
     border-radius: 8px;
     margin-bottom: 1rem;
+}
+article {
+    background-color: #50AB80;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.about-me-content {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+.like-button {
+    display: inline-block;
+    background-color: #116A40;
+    color: #F0E9D1;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
 }
-.headshot {
-    max-width: 100px;
-    border-radius: 50%;
-    border: 3px solid #50AB80;
+.like-checkbox {
+    display: none;
 }
+.like-checkbox:checked + .like-button::after {
+    content: " 👍";
+    margin-left: 0.5rem;
+    font-size: 1rem;
+}
+
+/* Footer */
 footer {
     background-color: #116A40;
     color: #F0E9D1;
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    article img {
+        height: 150px; 
+    }
 }
