@@ -72,8 +72,21 @@ article {
     margin-left: 0.5rem;
     font-size: 1rem;
 }
+.about-me-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    text-align: left;
+}
 
-/* Footer */
+.headshot {
+    max-width: 80px; 
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid #50AB80;
+}
+
 footer {
     background-color: #116A40;
     color: #F0E9D1;
