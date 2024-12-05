@@ -11,24 +11,32 @@
         <img src="images/logo.png" alt="MKTech Logo" class="logo">
         <h1>MKTech</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="learn-more.html">Learn More</a>
-            <a href="previous-posts.html">Previous Posts</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="learn-more.html">Learn More</a></li>
+                <li><a href="previous-posts.html">Previous Posts</a></li>
+            </ul>
         </nav>
     </header>
     <main>
         <section class="new-posts">
             <article>
                 <img src="images/post1.jpg" alt="Tech Item 1">
-                <h2>Tech Post 1</h2>
+                <h2>Tech Post 1 <span class="thumbs-up"></span></h2>
                 <p>A brief description of this exciting tech item.</p>
-                <button class="like-button">Like</button>
+                <label>
+                    <input type="checkbox" class="like-checkbox">
+                    <span class="like-button">Like</span>
+                </label>
             </article>
             <article>
                 <img src="images/post2.jpg" alt="Tech Item 2">
-                <h2>Tech Post 2</h2>
+                <h2>Tech Post 2 <span class="thumbs-up"></span></h2>
                 <p>A brief description of this innovative gadget.</p>
-                <button class="like-button">Like</button>
+                <label>
+                    <input type="checkbox" class="like-checkbox">
+                    <span class="like-button">Like</span>
+                </label>
             </article>
         </section>
     </main>

@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
     font-family: 'Roboto', sans-serif;
     color: #363330;
@@ -10,25 +11,51 @@ header {
     color: #F0E9D1;
     padding: 1rem;
     text-align: center;
+    position: relative;
 }
 header h1 {
     margin: 0;
 }
-nav a {
+
+/* Logo Styling */
+.logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 120px; /* Reduced size */
+    margin-bottom: 1rem;
+}
+
+/* Navigation Styling */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+nav ul li {
+    background-color: #50AB80;
+    border: 2px solid #116A40;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+}
+nav ul li a {
     color: #F0E9D1;
-    margin: 0 1rem;
     text-decoration: none;
+    font-weight: bold;
 }
-nav a:hover {
-    text-decoration: underline;
+nav ul li:hover {
+    background-color: #116A40;
+    cursor: pointer;
 }
-main {
-    padding: 2rem;
-}
+
+/* New Posts Section */
 .new-posts, .previous-posts {
     display: grid;
     gap: 1.5rem;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 2rem;
 }
 article {
     background-color: #50AB80;
@@ -39,7 +66,40 @@ article {
 article img {
     max-width: 100%;
     border-radius: 8px;
+    margin-bottom: 1rem;
 }
+.like-button {
+    display: inline-block;
+    background-color: #116A40;
+    color: #F0E9D1;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+}
+.like-checkbox {
+    display: none; /* Hide the actual checkbox */
+}
+.like-checkbox:checked + .like-button::after {
+    content: " 👍";
+    margin-left: 0.5rem;
+    font-size: 1rem;
+}
+
+/* About Me Section */
+.about-me-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.headshot {
+    max-width: 100px; /* Small size for headshot */
+    border-radius: 50%;
+    border: 3px solid #50AB80;
+}
+
+/* Footer */
 footer {
     background-color: #116A40;
     color: #F0E9D1;
@@ -47,19 +107,14 @@ footer {
     padding: 1rem;
     margin-top: 2rem;
 }
-button {
-    background-color: #116A40;
-    color: #F0E9D1;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-}
-button:hover {
-    background-color: #0D4F30;
-}
+
+/* Responsive Styling */
 @media (max-width: 600px) {
-    main {
-        padding: 1rem;
+    .logo {
+        max-width: 80px;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
     }
 }
