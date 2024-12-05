@@ -82,7 +82,6 @@ footer {
     margin-top: 2rem;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 600px) {
     nav ul {
         flex-direction: column;
